@@ -1,0 +1,45 @@
+{
+    "conversas": [
+        {
+            "mensagens": [
+            "oi", 
+            "olá",
+            "e aí",
+            "opa",
+            "salve", 
+            "fala aí",
+            "tudo bem?", 
+            "oi, tudo bem?", 
+            "olá, tudo bem?",
+            "como vai?", 
+            "oi, como vai?", 
+            "olá, como vai?", 
+            "como você está?", 
+            "oi, como você está?",
+            "olá, como você está?",
+            "tudo certo?", 
+            "oi, tudo certo?",
+            "olá, tudo certo?",
+            "tudo tranquilo?",
+            "oi, tudo tranquilo?",
+            "olá, tudo tranquilo?",
+            "como tem passado?",
+            "oi, tudo tranquilo?",
+            "olá, tudo tranquilo?"
+            ],
+            "resposta": "Olá! Sou o COFFICERBot, seu assistente corporativo. Como posso ajudar?"
+        },
+        {
+            "mensagens": ["bom dia", "olá, bom dia", "oi, bom dia", "bom dia, tudo bem?", "bom dia, tudo certo?"],
+            "resposta": "Bom dia! Sou o COFFICERBot, seu assistente corporativo. Como posso ajudar nesta manhã?"
+        },
+        {
+            "mensagens": ["boa tarde", "olá, boa tarde", "oi, boa tarde", "boa tarde, tudo bem?", "boa tarde, tudo certo?"],
+            "resposta": "Boa tarde! Sou o COFFICERBot, seu assistente de escritório corporativo. O que posso fazer por você?"
+        },
+        {
+            "mensagens": ["boa noite", "olá, boa noite", "oi, boa noite", "boa noite, tudo bem?", "boa noite, tudo certo?"],
+            "resposta": "Boa noite! Sou o COFFICERBot, seu assistente corporativo. Como posso te ajudar agora?"
+        }
+    ]
+}
