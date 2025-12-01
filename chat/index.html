@@ -1,0 +1,315 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <title>COFFICERBot</title>
+
+    <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Inter", Arial, sans-serif;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: background 0.3s, color 0.3s;
+    }
+
+    body.dark {
+      background: #0d1117;
+      color: #c9d1d9;
+    }
+
+    body.light {
+      background: #f6f8fa;
+      color: #1f2328;
+    }
+
+    .chat-wrapper {
+      width: 100%;
+      max-width: 900px;
+      height: 90vh;
+      border-radius: 12px;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    body.light .chat-wrapper {
+      background: #ffffff;
+      border-color: #d0d7de;
+    }
+
+    body.dark .chat-wrapper {
+      background: #161b22;
+      border-color: #30363d;
+    }
+
+    header {
+      padding: 15px;
+      font-size: 18px;
+      font-weight: 600;
+      text-align: center;
+      position: relative;
+      background: #161b22 !important;
+      border-bottom: 1px solid #30363d;
+      color: #c9d1d9 !important;
+    }
+
+      .theme-toggle {
+        position: absolute;
+        right: 15px;
+        top: 50%;
+        transform: translateY(-50%);
+        cursor: pointer;
+        background: none;
+        border: none;
+        font-size: 18px;
+        color: white;
+        padding: 5px;
+      }
+
+      #messages {
+        list-style: none;
+        flex: 1;
+        padding: 25px;
+        overflow-y: auto;
+        display: flex;
+        flex-direction: column;
+        gap: 22px;
+      }
+
+      .msg {
+        max-width: 75%;
+        padding: 12px 14px;
+        line-height: 1.55;
+        border-radius: 10px;
+        font-size: 16px;
+        white-space: pre-wrap;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+      }
+
+      body.dark .bot {
+        align-self: flex-start;
+        background: #21262d;
+        border: 1px solid #30363d;
+        color: #c9d1d9;
+      }
+
+      body.light .bot {
+        background: #f0f3f6;
+        border: 1px solid #d0d7de;
+        color: #1f2328;
+      }
+
+      body.dark .eu {
+        align-self: flex-end;
+        background: #30363d;
+        color: #ffffff;
+        border: 1px solid #484f58;
+      }
+
+      body.light .eu {
+        align-self: flex-end;
+        background: #d0d7de;
+        color: #1f2328;
+        border: 1px solid #afb8c1;
+      }
+
+      form {
+        padding: 20px;
+        border-top: 1px solid rgba(255,255,255,0.1);
+        display: flex;
+        justify-content: center;
+      }
+
+      body.light form {
+        border-color: #ddd;
+      }
+
+      .input-box {
+        width: 100%;
+        max-width: 800px;
+        display: flex;
+        align-items: center;
+        border-radius: 12px;
+        padding: 10px 16px;
+      }
+
+      body.dark .input-box {
+        background: #0d1117; 
+        border: 1px solid #30363d; 
+      }
+
+      body.light .input-box {
+        background: #f1f1f1;
+        border-color: #ccc;
+        border: 1px solid #d0d7de;
+      }
+
+      .input-box input {
+        flex: 1;
+        background: transparent;
+        border: none;
+        color: inherit;
+        font-size: 16px;
+        outline: none;
+      }
+
+      .send-btn {
+        background: none;
+        border: none;
+        cursor: pointer;
+        padding: 6px;
+        margin-left: 8px;
+        display: flex;
+        align-items: center;
+      }
+
+      .send-btn svg {
+        width: 24px;
+        height: 24px;
+      }
+
+      body.dark .send-btn svg path {
+        fill: #ccc;
+      }
+
+      body.light .send-btn svg path {
+        fill: #060450;
+      }
+
+      @media (max-width: 600px) {
+        .chat-wrapper {
+          height: 100vh;
+          border-radius: 0;
+        }
+
+        #messages {
+          padding: 15px;
+          gap: 15px;
+        }
+
+        .msg {
+          font-size: 15px;
+          max-width: 90%;
+        }
+
+        form {
+          padding: 10px;
+        }
+      }
+
+      #messages::-webkit-scrollbar {
+        width: 10px;
+      }
+
+      body.dark #messages::-webkit-scrollbar-track {
+        background: #0d1117;
+      }
+
+      body.dark #messages::-webkit-scrollbar-thumb {
+        background: #30363d;
+        border-radius: 8px;
+      }
+
+      body.dark #messages::-webkit-scrollbar-thumb:hover {
+        background: #484f58;
+      }
+
+      body.light #messages::-webkit-scrollbar-track {
+        background: #e5e5e5;
+      }
+
+      body.light #messages::-webkit-scrollbar-thumb {
+        background: #bdbdbd;
+        border-radius: 8px;
+      }
+
+      body.light #messages::-webkit-scrollbar-thumb:hover {
+        background: #9a9a9a;
+      }
+    </style>
+  </head>
+
+  <body class="dark">
+
+    <div class="chat-wrapper">
+      <header>
+         COFFICERBot 
+        <button class="theme-toggle" id="themeButton">🌙</button>
+      </header>
+
+      <ul id="messages"></ul>
+
+      <form id="form">
+        <div class="input-box">
+          <input id="m" autocomplete="off" placeholder="Digite sua mensagem..." />
+
+          <button class="send-btn">
+            <svg viewBox="0 0 24 24">
+              <path d="M2 21l21-9L2 3v7l15 2-15 2v7z"></path>
+            </svg>
+          </button>
+        </div>
+      </form>
+    </div>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="https://code.jquery.com/jquery-1.11.1.js"></script>
+
+    <script>
+      $(function () {
+        var socket = io();
+
+        $("form").submit(function () {
+          const texto = $("#m").val();
+          if (!texto.trim()) return false;
+
+          $("#messages").append(
+            $('<li class="msg eu">').text(texto)
+          );
+
+          socket.emit("chat message", texto);
+          $("#m").val("");
+
+          scrollBottom();
+          return false;
+        });
+
+        socket.on("chat message", function (msg) {
+          $("#messages").append(
+            $('<li class="msg bot">').text(msg)
+          );
+          scrollBottom();
+        });
+
+        function scrollBottom() {
+          const messages = document.getElementById("messages");
+          messages.scrollTop = messages.scrollHeight;
+        }
+
+        const themeButton = document.getElementById("themeButton");
+        const body = document.body;
+
+        themeButton.addEventListener("click", () => {
+          if (body.classList.contains("dark")) {
+            body.classList.replace("dark", "light");
+            themeButton.textContent = "☀️";
+          } else {
+            body.classList.replace("light", "dark");
+            themeButton.textContent = "🌙";
+          }
+        });
+      });
+    </script>
+
+  </body>
+</html>
