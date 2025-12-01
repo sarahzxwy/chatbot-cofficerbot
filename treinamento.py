@@ -4,7 +4,10 @@ from chatterbot.trainers import ListTrainer
 import json
 import os
 
-CONVERSAS = [os.getenv("SAUDACOES", "base_dados/saudacoes.json")]
+CONVERSAS = [
+    os.getenv("SAUDACOES", "base_dados/saudacoes.json"), 
+    os.getenv("INFORMACOES", "base_dados/informacoes.json")
+]
 
 NOME_ROBO = "COFFICERBot"
 
