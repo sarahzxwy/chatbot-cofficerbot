@@ -4,7 +4,7 @@ NOME_ROBO = "COFFICERBot"
 CONFIANCA_MINIMA = 0.60
 
 def configurar_robo():
-    robo = ChatBot(NOME_ROBO, read_only = True)
+    robo = ChatBot(NOME_ROBO, read_only=True)
 
     return robo
 
