@@ -18,7 +18,7 @@ Abaixo estão alguns exemplos de questões que o COFFICERBot é capaz de reconhe
 - **Serviços oferecidos**: "o que o assistente virtual faz?"
 - **Manutenção**: "como solicitar manutenção?"
 - **Equipamentos disponíveis**: "quais equipamentos o escritório disponibiliza?"
-- **Reserva de salas**: "como reservar uma sala?"
+- **Reserva de salas**: "como reservar uma sala de reunião?"
 - **Setores do escritório**: "onde ficam os setores do escritório?"
 - **Solicitação de materiais**: "como solicitar materiais de escritório?"
 - **Visitantes**: "como recebo visitantes?"
