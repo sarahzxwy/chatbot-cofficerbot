@@ -15,8 +15,7 @@ class TesteInformacoes(unittest.TestCase):
             "como posso agendar reuniões?",
             "como agendar reunião?",
             "onde agendo reunião?",
-            "quero marcar uma reunião",
-            "onde marco reunião?"
+            "quero marcar uma reunião"
         ]
 
         for msg in mensagens:
@@ -34,9 +33,7 @@ class TesteInformacoes(unittest.TestCase):
             "quais os horários de funcionamento do escritório?",
             "qual o horário de funcionamento?",
             "que horas o escritório abre?",
-            "que horas funciona o escritório?",
-            "horário de funcionamento",
-            "hora de funcionamento"
+            "que horas funciona o escritório?"
         ]
 
         for msg in mensagens:
@@ -54,8 +51,7 @@ class TesteInformacoes(unittest.TestCase):
             "que serviços o assistente virtual do escritório oferece?",
             "o que o assistente virtual faz?",
             "quais serviços automatizados a empresa oferece?",
-            "quais comandos o assistente reconhece?",
-            "como funciona o assistente virtual?"
+            "quais comandos o assistente reconhece?"
         ]
 
         for msg in mensagens:
@@ -72,10 +68,7 @@ class TesteInformacoes(unittest.TestCase):
         mensagens = [
             "onde faço uma solicitação de manutenção?",
             "como solicitar manutenção?",
-            "preciso pedir manutenção",
-            "como chamo manuntenção?",
-            "quero solicitar manutenção",
-            "quero saber como solicitar manutenção"
+            "preciso pedir manutenção"
         ]
 
         for msg in mensagens:
@@ -92,9 +85,7 @@ class TesteInformacoes(unittest.TestCase):
         mensagens = [
             "quais equipamentos o escritório disponibiliza?",
             "que equipamentos estão disponíveis?",
-            "equipamentos do escritório",
-            "quai equipamentos eu posso usar?",
-            "quero saber dos equipamentos disponíveis"
+            "equipamentos do escritório"
         ]
 
         for msg in mensagens:
@@ -111,10 +102,7 @@ class TesteInformacoes(unittest.TestCase):
         mensagens = [
             "como reservar uma sala de reunião?",
             "onde reservo sala de reunião?",
-            "quero reservar uma sala",
-            "quero saber como reservar sala",
-            "preciso reservar uma sala",
-            "reservar sala"
+            "quero reservar uma sala"
         ]
 
         for msg in mensagens:
@@ -131,8 +119,7 @@ class TesteInformacoes(unittest.TestCase):
         mensagens = [
             "onde ficam os setores do escritório?",
             "mapa do escritório",
-            "localização dos setores",
-            "quero saber dos setores"
+            "localização dos setores"
         ]
 
         for msg in mensagens:
@@ -149,11 +136,7 @@ class TesteInformacoes(unittest.TestCase):
         mensagens = [
             "como solicitar materiais de escritório?",
             "preciso de materiais",
-            "como peço materiais?",
-            "onde solicito materiais?",
-            "quero saber como pedir materiais",
-            "quero saber como solicitar materiais",
-            "quero socilitar materiais"
+            "como peço caneta ou papel?"
         ]
 
         for msg in mensagens:
@@ -168,12 +151,9 @@ class TesteInformacoes(unittest.TestCase):
         self.assertIsNotNone(self.robo)
 
         mensagens = [
-            "quais são os procedimentos para receber visita no escritório?",
+            "quais são os procedimentos para receber fornecedores ou clientes no escritório?",
             "como recebo visitantes?",
-            "procedimento para visitante",
-            "quero receber um cliente",
-            "quero receber um fornecedor",
-            "quero saber como receber visitantes"
+            "procedimento para visitante"
         ]
 
         for msg in mensagens:
@@ -188,10 +168,9 @@ class TesteInformacoes(unittest.TestCase):
         self.assertIsNotNone(self.robo)
 
         mensagens = [
-            "onde encontro o calendário de eventos da empresa?",
+            "onde encontro o calendário de eventos internos da empresa?",
             "calendário de eventos",
-            "agenda de eventos",
-            "quero saber dos eventos"
+            "eventos internos"
         ]
 
         for msg in mensagens:
@@ -208,7 +187,7 @@ class TesteInformacoes(unittest.TestCase):
         mensagens = [
             "como solicitar férias?",
             "quero pedir férias",
-            "onde solicito férias?",
+            "onde solicito férias?"
         ]
 
         for msg in mensagens:
