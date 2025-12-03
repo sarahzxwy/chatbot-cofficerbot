@@ -118,7 +118,7 @@ class TesteInformacoes(unittest.TestCase):
 
         mensagens = [
             "onde ficam os setores do escritório?",
-            "mapa do escritório",
+            "mapa",
             "localização dos setores"
         ]
 

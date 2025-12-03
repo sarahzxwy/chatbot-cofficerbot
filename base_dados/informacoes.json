@@ -54,7 +54,7 @@
     {
       "mensagens": [
         "onde ficam os setores do escritório?",
-        "mapa do escritório",
+        "mapa",
         "localização dos setores"
       ],
       "resposta": "O mapa completo do escritório e a localização dos setores estão disponíveis no portal interno da empresa, na área de 'Infraestrutura'."
